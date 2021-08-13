@@ -152,27 +152,64 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-My-New-Post" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-栈与队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/06/My-New-Post/">My New Post</a>
-    </h1>
-  
-
-        
-        <a href="/2021/08/06/My-New-Post/" class="archive-article-date">
-  	<time datetime="2021-08-06T12:32:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-06</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>…..</p>
+        <h1 id="栈与队列"><a href="#栈与队列" class="headerlink" title="栈与队列"></a>栈与队列</h1><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>栈：LIFO—先进后出</p>
+<p>队列：FIFO—先进先出</p>
+<p>如图所示：</p>
+<img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210813145017536.png" alt="image-20210813145017536" style="zoom:50%;" />
+
+
+
+
+
+
+
+
+
+<p>##栈的应用</p>
+<h3 id="典型应用场合"><a href="#典型应用场合" class="headerlink" title="典型应用场合"></a>典型应用场合</h3><ul>
+<li><p><strong>逆序输出：</strong></p>
+<p>输出次序与处理过程颠倒；递归深度和输出长度不易预知</p>
+</li>
+<li><p><strong>递归嵌套</strong></p>
+<p>具有<strong>自相似</strong>的问题可递归描述，但分支位置和嵌套深度难以在事前固定或确定</p>
+</li>
+<li><p><strong>延迟缓冲</strong></p>
+<p>线性扫描算法模式中，在预读足够长之后，方能确定可处理的前缀</p>
+</li>
+</ul>
+<h3 id="1-进制转换"><a href="#1-进制转换" class="headerlink" title="1. 进制转换"></a>1. 进制转换</h3><p>例如：将  89<del>(10)</del> —–&gt; ( 1011001 )<del>(2)</del>    数学上，我们会使用短除法，将余数由底而上倒序输出即可。</p>
+<p>思路：在计算过程中，每得到一个余数，就随即通过push将它压入栈中。待计算终止后，再通过一系列pop操作出栈输出即可。</p>
+<h4 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">convert</span><span class="params">(Stack&lt;<span class="keyword">char</span>&gt; &amp;S, __int64 n, <span class="keyword">int</span> base)</span></span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">char</span> digit[]=&#123; <span class="comment">//新进制下的数位符号，可视为base取值范围适当补充</span></span><br><span class="line">        <span class="string">&#x27;0&#x27;</span>,<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;4&#x27;</span>,<span class="string">&#x27;5&#x27;</span>,<span class="string">&#x27;6&#x27;</span>,<span class="string">&#x27;7&#x27;</span>,<span class="string">&#x27;8&#x27;</span>,<span class="string">&#x27;9&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;B&#x27;</span>,<span class="string">&#x27;C&#x27;</span>,<span class="string">&#x27;D&#x27;</span>,<span class="string">&#x27;E&#x27;</span>,<span class="string">&#x27;F&#x27;</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">while</span>(n&gt;<span class="number">0</span>)&#123;</span><br><span class="line">        S.<span class="built_in">push</span>(digit[n%base]); <span class="comment">//余数(对应的数位)入栈</span></span><br><span class="line">        n/=base; <span class="comment">//n的值更新为其对base的除商</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    Stack&lt;<span class="keyword">char</span>&gt; S;</span><br><span class="line">    <span class="built_in">convert</span>(S,n,base); <span class="comment">//用栈记录转换得到的各个余数</span></span><br><span class="line">    <span class="keyword">while</span>(!S.<span class="built_in">empty</span>()) <span class="built_in">printf</span>(<span class="string">&quot;%c&quot;</span>, S.<span class="built_in">pop</span>() ); <span class="comment">//逆序输出</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="2-括号匹配"><a href="#2-括号匹配" class="headerlink" title="2. 括号匹配"></a>2. 括号匹配</h3><p>来看个实例：</p>
+<p>( a [  m  - 1] [ n + 1 ] ==)== + a [ m + 1 ] [ n - 1 ]  )  —-&gt;  括号失配</p>
+<p>( a [  m  - 1 ] [n + 1 ]  +  [ m + 1 ] [ n - 1 ])  —-&gt;  括号匹配</p>
+<p>观察：除了各种括号，其余符号均可暂时忽略 （做一次线性扫描的预处理）</p>
+<p>( [    ] [    ] ==)==    [    ] [    ]  )  —-&gt;  括号失配</p>
+<p>(  [     ] [    ]    [    ] [    ]  )  —-&gt;  括号匹配</p>
+<p>思路：</p>
+<p>如果括号是匹配的，那么消去一对==紧邻==的左右括号，不会影响全局的匹配判断。</p>
+<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210813191400436.png" alt="image-20210813191400436"></p>
+<p>那么，如何找到这对括号？</p>
+<p>再者，如何使问题的这种简化得以持续的进行呢？</p>
+<p>方法：顺序扫描表达式，用==栈==记录已扫描的部分。 实际只需要记录<strong>已发现但尚未匹配</strong>的左括号。</p>
+<p>​           反复迭代：凡是遇到左括号 ==（== ，则入栈；凡是遇到右括号 ==）==  , 则出栈，构成一对紧邻的左右括号。</p>
+<p>​            如果<strong>最后一个右括号处理完后，==恰好==发现栈空</strong>，则表示表达式是括号匹配的。</p>
+<p>​            </p>
+<h4 id="算法实现-1"><a href="#算法实现-1" class="headerlink" title="算法实现"></a>算法实现</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">paren</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> exp[], <span class="keyword">int</span> low, <span class="keyword">int</span> high)</span></span>&#123; <span class="comment">//exp[low,high) 左闭右开</span></span><br><span class="line">    Stack&lt;<span class="keyword">char</span>&gt; S;<span class="comment">//使用栈记录 已发现但尚未匹配的左括号</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=low;i&lt;high;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">&#x27;(&#x27;</span>==exp[i] ) S.<span class="built_in">push</span>( exp[i] );<span class="comment">//遇到左括号，入栈</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(<span class="string">&#x27;)&#x27;</span>==exp[i] &amp;&amp; !S.<span class="built_in">empty</span>() ) S.<span class="built_in">pop</span>( ); <span class="comment">//遇到右括号，若栈非空，则弹出左括号</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">//说明遇到右括号时，栈已空，必不匹配</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> S.<span class="built_in">empty</span>(); <span class="comment">//最终，栈空当且仅当匹配</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="练习题"><a href="#练习题" class="headerlink" title="练习题"></a>练习题</h4><p><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/valid-parentheses/">leetcode20.有效的括号</a></p>
 
       
 
@@ -185,74 +222,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/06/My-New-Post/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-    </h1>
-  
-
-        
-        <a href="/2021/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2021-08-06T08:45:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-06</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>…<br>内容<br>…</p>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>…<br>内容<br>…</p>
-<hr>
-<p>#参考文献<br>…</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/06/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
+          <a class="article-more-a" href="/2021/08/13/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">展开全文 >></a>
         </p>
       
 
