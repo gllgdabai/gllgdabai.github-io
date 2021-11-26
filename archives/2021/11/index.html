@@ -6,40 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://gllgdabai.github.io">
-  <title>二叉树 | Hexo</title>
+  <title>Archives: 2021/11 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="二叉树##数的表示 父节点表示法  观察上图，任一节点有且只有一个父节点，因此可以将节点组织为序列，各节点分别记录：  data：本身信息 parent：父节点的秩或位置     rank 0 1 2 3 4 5 6 7 8 9    data R A B C D E F G H K   parent -1 0 0 0 1 1 3 6 6 6   注意：树根(0)也有“虚构的”父节点 parent">
-<meta property="og:type" content="article">
-<meta property="og:title" content="二叉树">
-<meta property="og:url" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://gllgdabai.github.io/archives/2021/11/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="二叉树##数的表示 父节点表示法  观察上图，任一节点有且只有一个父节点，因此可以将节点组织为序列，各节点分别记录：  data：本身信息 parent：父节点的秩或位置     rank 0 1 2 3 4 5 6 7 8 9    data R A B C D E F G H K   parent -1 0 0 0 1 1 3 6 6 6   注意：树根(0)也有“虚构的”父节点 parent">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/1.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210816170715825.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210816170857398.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210816171055947.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210816174220534.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210817202119522.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210817205315894.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210817212726341.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210817213221126.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210817215020094.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210817232335304.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210818163920804.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210818164734746.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210818201142172.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210818201227572.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210818203858171.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210818204039009.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210818204134838.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210818204150413.png">
-<meta property="og:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210820112649234.png">
-<meta property="article:published_time" content="2021-08-16T07:52:25.000Z">
-<meta property="article:modified_time" content="2021-10-11T00:44:45.406Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -175,385 +150,43 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-二叉树" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      二叉树
-    </h1>
-  
-
-        
-        <a href="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2021-08-16T07:52:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-16</time>
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/11/26/Linux%E7%AC%AC%E4%B8%89%E6%AC%A1%E4%BD%9C%E4%B8%9A/" class="archive-article-date">
+  	<time datetime="2021-11-26T01:28:39.711Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-11-26</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><p>##数的表示</p>
-<h3 id="父节点表示法"><a href="#父节点表示法" class="headerlink" title="父节点表示法"></a>父节点表示法</h3><img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/1.png" alt="image-20210816155359947" style="zoom:67%;">
-
-<p>观察上图，任一节点有且只有一个父节点，因此可以将节点组织为序列，各节点分别记录：</p>
-<ul>
-<li>data：本身信息</li>
-<li>parent：父节点的秩或位置</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>rank</th>
-<th>0</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>4</th>
-<th>5</th>
-<th>6</th>
-<th>7</th>
-<th>8</th>
-<th>9</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>data</strong></td>
-<td>R</td>
-<td>A</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>E</td>
-<td>F</td>
-<td>G</td>
-<td>H</td>
-<td>K</td>
-</tr>
-<tr>
-<td><strong>parent</strong></td>
-<td><strong>-1</strong></td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>3</td>
-<td>6</td>
-<td>6</td>
-<td>6</td>
-</tr>
-</tbody></table>
-<p>注意：树根(0)也有“虚构的”父节点 parent(0) = -1 或 parent(0) = NULL</p>
-<p>​    <strong>时间&amp;空间性能分析：</strong></p>
-<p>时间性能：</p>
-<ul>
-<li>查找父节点 parent() :  O(1)</li>
-<li>查找根节点 root() :  O(n)或O(1)</li>
-<li>查找长子节点 firstChild( )或兄弟 nextSibling() :  O(n) </li>
-</ul>
-<p>空间性能：O(n)</p>
-<p>这样的存储结构，我们可以根据节点的parent指针很容易的找到它们的父节点，时间复杂度：O(1)。但是如果我们想要知道节点的孩子是什么，那得遍历整个结构才行。</p>
-<p>那么，如何加速对孩子、兄弟的查找？—&gt;  用孩子节点表示树</p>
-<h3 id="孩子节点表示法"><a href="#孩子节点表示法" class="headerlink" title="孩子节点表示法"></a>孩子节点表示法</h3><p>为了遍历整棵树，把每个节点放到一个顺序存储结构的数组中是合理的，但每个结点的孩子有多少无法确定，所有可以再对每个节点的孩子建立一个单链表体现它们的关系</p>
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210816170715825.png" alt="image-20210816170715825" style="zoom: 67%;">
-
-<p>表示方法：将同一节点的所有孩子，组织为单链表。链表的长度，分别等于对应节点的度数。</p>
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210816170857398.png" alt="image-20210816170857398" style="zoom:67%;">
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CTNode</span></span>&#123; <span class="comment">//孩子节点</span></span><br><span class="line">    <span class="keyword">int</span> child;</span><br><span class="line">    CTNode next;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CTBox</span></span>&#123; <span class="comment">//表头结构</span></span><br><span class="line">    Object data;</span><br><span class="line">    CTNode children;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CTree</span></span>&#123; <span class="comment">//树结构</span></span><br><span class="line">    CTBox nodes[]= <span class="keyword">new</span> CTBox[MAX_TREE_SIZE];<span class="comment">// 结点数组</span></span><br><span class="line">    <span class="keyword">int</span> root; <span class="comment">//根结点的位置(树的入口)</span></span><br><span class="line">    <span class="keyword">int</span> N; <span class="comment">//结点个数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>问题来了，所有孩子都可以很快的找出，我们要查找某个结点的孩子或兄弟，只需查询这个节点的孩子链表即可。</p>
-<p>但是查找父节点 parent( ) 却很慢，需要整棵树遍历才行。</p>
-<p>因此，我们可以把父节点表示法和孩子节点表示法综合以下，得出用父节点+孩子节点表示树。</p>
-<h3 id="父节点-孩子节点表示法（双亲孩子表示法）"><a href="#父节点-孩子节点表示法（双亲孩子表示法）" class="headerlink" title="父节点+孩子节点表示法（双亲孩子表示法）"></a>父节点+孩子节点表示法（双亲孩子表示法）</h3><img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210816171055947.png" alt="image-20210816171055947" style="zoom:67%;">
-
-
-
-<h3 id="长子-兄弟表示法（孩子兄弟表示法）"><a href="#长子-兄弟表示法（孩子兄弟表示法）" class="headerlink" title="长子+兄弟表示法（孩子兄弟表示法）"></a>长子+兄弟表示法（孩子兄弟表示法）</h3><h4 id="表示方法："><a href="#表示方法：" class="headerlink" title="表示方法："></a>表示方法：</h4><p>每个节点均设两个引用:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TreeNode</span></span>&#123;</span><br><span class="line">    Object data;</span><br><span class="line">    TreeNode firstChild; <span class="comment">//长子(第一儿子)节点</span></span><br><span class="line">    TreeNode nextSiling; <span class="comment">//兄弟(下一兄弟)节点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>下图为树的长子-兄弟表示法：</p>
-<p><img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210816174220534.png" alt="image-20210816174220534"></p>
-<h4 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h4><p>对于一个度数为d的节点，可在O(d+1)时间内遍历完所有孩子</p>
-<p>若再设置parent引用，那么parent( ) 也仅需O(1)</p>
-<p><strong>最大的好处</strong>是它把一颗复杂的数(多叉树)变为了一颗二叉树，这样我们就可以充分利用二叉树的特性和算法来处理多叉树了。</p>
-<h2 id="二叉树的实现"><a href="#二叉树的实现" class="headerlink" title="二叉树的实现"></a>二叉树的实现</h2><p>####二叉树的节点的ADT接口：</p>
-<p>除了继承Position接口的getElem()和setElem()方法外，针对二叉树节点的操作要求，定义了一系列的方法。其中有些是辅助性的，旨在提高代码的简洁性和可读性。</p>
-<p>还定义了诸如secede()、attachL()和attachR()等方法，这是为后面实现二叉查找树的相关操作而埋下的伏笔。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">TreeNodePosition</span> <span class="keyword">extends</span> <span class="title">Position</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasParent</span><span class="params">()</span></span>; <span class="comment">////判断是否有父亲（为使代码描述简洁）</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNodePosition <span class="title">getParent</span><span class="params">()</span></span>; <span class="comment">//返回当前节点的父节点</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setParent</span><span class="params">(TreeNodePosition p)</span></span>; <span class="comment">//设置当前节点的父节点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isLeaf</span><span class="params">()</span></span>; <span class="comment">//判断是否为叶子节点</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isLChild</span><span class="params">()</span></span>; <span class="comment">//判断是否为左孩子（为使代码描述简洁）</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNodePosition <span class="title">getLChild</span><span class="params">()</span></span>; <span class="comment">//返回当前节点的左孩子</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasLChild</span><span class="params">()</span></span>; <span class="comment">//判断是否有左孩子</span></span><br><span class="line">    <span class="comment">//设置当前节点的左孩子（注意：this.lChild 和 c.parent 都不一定为空）</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setLChild</span><span class="params">(TreeNodePosition c)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isRChild</span><span class="params">()</span></span>; <span class="comment">//判断是否为右孩子（为使代码描述简洁）</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNodePosition <span class="title">getRChild</span><span class="params">()</span></span>; <span class="comment">//返回当前节点的右孩子</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasRChild</span><span class="params">()</span></span>; <span class="comment">//判断是否有右孩子</span></span><br><span class="line">    <span class="comment">//设置当前节点的右孩子（注意：this.rChild 和 c.parent 都不一定为空）</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setRChild</span><span class="params">(TreeNodePosition c)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getSize</span><span class="params">()</span></span>; <span class="comment">//返回当前节点后代元素的数目</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateSize</span><span class="params">()</span></span>; <span class="comment">//在孩子发生变化后，更新当前节点及其祖先的规模</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getHeight</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateHeight</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getDepth</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateDepth</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//按照中序遍历的次序，找到当前节点的直接前驱</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNodePosition <span class="title">getPrev</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//按照中序遍历的次序，找到当前节点的直接后驱</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNodePosition <span class="title">getSucc</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//断绝当前节点与其父亲的父子关系,并返回当前节点</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNodePosition <span class="title">secede</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//将节点c作为当前节点的左孩子</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNodePosition <span class="title">attachL</span><span class="params">(BinTreePosition c)</span></span>;</span><br><span class="line">    <span class="comment">//将节点c作为当前节点右孩子</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNodePosition <span class="title">attachR</span><span class="params">(BinTreePosition c)</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//前序遍历</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterator <span class="title">elementsPreorder</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//中序遍历</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterator <span class="title">elementsInorder</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//后序遍历</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterator <span class="title">elementsPostorder</span><span class="params">()</span></span>;</span><br><span class="line">    <span class="comment">//层序遍历</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterator <span class="title">elementsLevelorder</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="二叉树节点类的实现（部分）"><a href="#二叉树节点类的实现（部分）" class="headerlink" title="二叉树节点类的实现（部分）"></a>二叉树节点类的实现（部分）</h4><p><strong>updateSize( )</strong></p>
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210817202119522.png" alt="image-20210817202119522" style="zoom:80%;">
-
-<p>若当前节点的孩子发生变化，比如说原有的某个孩子被删除后或者有新的孩子插入，就需要更新当前节点及其祖先的规模记录，以便后续的查询。</p>
-<p>注意，在这里<em><strong>允许直接对任何节点执行该方</strong></em>。</p>
-<p>此后还需要从v出发沿parent引用逆行向上，依次更新各个祖先的规模记录。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateSize</span><span class="params">()</span> </span>&#123; <span class="comment">//在孩子发生变化后，更新当前节点及其祖先的规模</span></span><br><span class="line">    size=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (hasLChild()) size+=getLChild().getSize(); <span class="comment">//左子树的规模</span></span><br><span class="line">    <span class="keyword">if</span> (hasRChild()) size+=getRChild().getSize(); <span class="comment">//右子树的规模</span></span><br><span class="line">    <span class="comment">//递归更新各个真祖先的规模记录</span></span><br><span class="line">    <span class="keyword">if</span> (hasParent()) getParent().updateSize();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>时间复杂度：若节点v的深度为depth(v)，则总共需要修改depth(v)+1个节点的的规模。为了更新一个节点的规模记录，需要执行两次get Size()操作并做两次加法。故时间复杂度为：O( depth(v) + 1)</p>
-<p><strong>updateHeight( )</strong></p>
-<p>在孩子发生变化后，也需要更新当前节点的高度记录。</p>
-<p>需要读出左、右孩子的高度，取二者中的最大者，再计入当前节点本身，就得到当前节点v的新高度。</p>
-<p>同样地，此后也需要从v出发沿parent引用逆行而上，依次更新各个祖先的高度纪录。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateHeight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    height=<span class="number">0</span>; <span class="comment">//先假设 没有左右孩子</span></span><br><span class="line">    <span class="keyword">if</span> (hasLChild()) height=Math.max(height,<span class="number">1</span>+getLChild().getHeight());</span><br><span class="line">    <span class="keyword">if</span> (hasRChild()) height=Math.max(height,<span class="number">1</span>+getRChild().getHeight());</span><br><span class="line">    <span class="comment">//递归更新各个真祖先的高度纪录</span></span><br><span class="line">    <span class="keyword">if</span> (hasParent()) getParent().updateHeight();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>时间复杂度：也updateSize() 过程差不多，也是O( depth(v) + 1) 。</p>
-<p><strong>updateDepth( )</strong></p>
-<p>在父节点发生变化后，有必要更新当前节点的深度纪录。</p>
-<p>只需读出新的父节点的深度，再加上 1 即得到当前节点的深度</p>
-<p>当然，此后也需要沿着lChild和rChild引用，逐层向下递归地更新每一个后代的深度记录。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateDepth</span><span class="params">()</span> </span>&#123; <span class="comment">//当父节点发生变化后，更新当前节点及其后代的深度</span></span><br><span class="line">    depth = hasParent() ? <span class="number">1</span>+getParent().getDepth() : <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (hasLChild()) getLChild().updateDepth();<span class="comment">//沿孩子引用逐层向下</span></span><br><span class="line">    <span class="keyword">if</span> (hasRChild()) getRChild().updateDepth(); <span class="comment">//递归地更新所有后代的深度纪录</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h2><p><img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210817205315894.png" alt="image-20210817205315894"></p>
-<h3 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h3><p><strong>递归实现：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(TreeNodePosition x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">    System.out.println(x.getElem());<span class="comment">//首先访问并输出x;</span></span><br><span class="line">    traverse(x.lChild);</span><br><span class="line">    traverse(x.rChild);</span><br><span class="line">&#125; <span class="comment">//T(n) = O(1) + T(a) +T(n-a-1) = O(n)</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>迭代实现1：</strong></p>
-<p>上述递归实现中，对左、右子树的递归遍历都类似与<strong>尾递归</strong>，尝试消除尾递归。</p>
-<p>思路：二分递归 —&gt;  迭代+单递归 —&gt; 迭代+ 栈，故利用栈来实现。</p>
-<p><strong>注意：</strong>前序遍历输出次序为：V—&gt;L—&gt;R ，由于借助了栈结构，先入后出，那么必须让R先进栈，L后进栈，这样才能保证 V—&gt;L—&gt;R的输出次序。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">travPre_I1</span><span class="params">(TreeNodePosition x)</span></span>&#123;</span><br><span class="line">    Stack&lt;TreeNodePosition &gt; S = <span class="keyword">new</span> Stack&lt;&gt;(); <span class="comment">//辅助栈</span></span><br><span class="line">    <span class="keyword">if</span>(x!=<span class="keyword">null</span>) S.push(x); <span class="comment">//根节点入栈</span></span><br><span class="line">    <span class="keyword">while</span>(!S.empty())&#123; <span class="comment">//在栈变空之前反复循环</span></span><br><span class="line">        x=S.pop(); <span class="comment">//弹出</span></span><br><span class="line">        System.out.println(x.getElem()); <span class="comment">//并访问当前节点</span></span><br><span class="line">        <span class="keyword">if</span> (x.hasRChild()) S.push(x.getRChild()); <span class="comment">//右孩子先入后出</span></span><br><span class="line">        <span class="keyword">if</span> (x.hasLChild()) S.push(x.getLChild()); <span class="comment">//左孩子后入先出</span></span><br><span class="line">    &#125;<span class="comment">//体会以上两句的次序</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>图例演示：</strong></p>
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210817212726341.png" alt="image-20210817212726341" style="zoom: 67%;">
-
-<p>不足之处：以上消除尾递归的思路不易推广，需要另寻他法 —&gt;  迭代实现2</p>
-<p><strong>迭代实现2：</strong></p>
-<p>让我们先看个实例，看看在遍历次序上有什么规律。<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210817213221126.png" alt="image-20210817213221126" style="zoom: 80%;"></p>
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210817215020094.png" alt="image-20210817215020094" style="zoom:80%;">
-
-
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">visitAlongLeftBranch</span><span class="params">(TreeNodePosition x, Stack&lt;BinTreePosition&gt; S)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(x!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.println(x.getElem()); <span class="comment">//访问当前节点</span></span><br><span class="line">            S.push(x.getRChild()); <span class="comment">//右孩子(右子树)入栈（将来逆序输出）</span></span><br><span class="line">            x=x.getLChild(); <span class="comment">//沿左侧链下行</span></span><br><span class="line">        &#125;<span class="comment">//只有右孩子、null可以入栈</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">travPre_I2</span><span class="params">(TreeNodePosition x)</span></span>&#123;</span><br><span class="line">        Stack&lt;TreeNodePosition&gt; S = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>)&#123; <span class="comment">//以（右）子树为单位，逐批访问节点</span></span><br><span class="line">            visitAlongLeftBranch(x,S); <span class="comment">//访问子树x的左侧链，并将右子树入栈缓冲</span></span><br><span class="line">            <span class="keyword">if</span> (S.empty()) <span class="keyword">break</span>; <span class="comment">//栈空即退出</span></span><br><span class="line">            x= S.pop(); <span class="comment">//弹出 下一子树的根</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>图例演示：</strong></p>
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210817232335304.png" alt="image-20210817232335304" style="zoom:80%;">
-
-
-
-<h3 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h3><p><strong>递归实现：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(TreeNodePosition x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">    traverse(x.getLChild);</span><br><span class="line">    System.out.println(x.getElem()); <span class="comment">//访问当前节点</span></span><br><span class="line">    traverse(x.getRChild);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>迭代实现1：</strong></p>
-<p>能否把上面写的前序遍历的迭代实现1的算法 调整下代码顺序就得到中序遍历的迭代算法呢？</p>
-<p>这里很难再像前序遍历的迭代实现1去利用迭代实现中序遍历，因为对于右子树的递归调用</p>
-<p><code>traverse(x.getRChild);</code>还可以称为尾递归的话，那左子树的递归调用<code>traverse(x.getLChild);</code>却由于中间嵌套了一行代码<code>System.out.println(x.getElem());</code>，而不是尾递归了。</p>
-<p>前序的遍历顺序是VLR，先遍历到的就是我们要访问的结点，遍历和访问顺序是一致的。</p>
-<p>中序的遍历顺序是LVR，先遍历到的是二叉树的顶部节点V，然后一层一层向下访问，直到到达树的左分支的最底部，才访问节点，遍历和访问顺序是不一致的。</p>
-<p>解决方法：借助指针的遍历 </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">travIn_I1</span><span class="params">(TreeNodePosition root)</span></span>&#123;</span><br><span class="line">    Stack&lt;TreeNodePosition&gt; S = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">    TreeNodePosition cur = root; <span class="comment">//cur标记当前节点</span></span><br><span class="line">    <span class="keyword">while</span>(cur!=<span class="keyword">null</span>||!S.empty())&#123;</span><br><span class="line">        <span class="comment">//不断往左子树方向走，每走一次就将当前节点保存到栈中</span></span><br><span class="line">		<span class="comment">//这是模拟递归的调用</span></span><br><span class="line">        <span class="keyword">if</span>(cur!=<span class="keyword">null</span>)&#123; <span class="comment">//还没遇到左分支最深的节点(即cur还没指向可以访问的左节点)</span></span><br><span class="line">            S.push(cur);</span><br><span class="line">            cur = cur.getLChild(); <span class="comment">//沿左分支下行</span></span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;<span class="comment">//当前节点cur为空,说明走到头了，cur此时是可以访问的左节点</span></span><br><span class="line">            cur = S.pop();	<span class="comment">//弹出，并</span></span><br><span class="line">            System.out.println(cur.getElem()); <span class="comment">//访问当前节点</span></span><br><span class="line">            cur= cur.getRChild(); <span class="comment">//进而转向右子树</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>迭代实现2：</strong></p>
-<p>让我们继续观察一个实例，找出遍历次序的规律</p>
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210818163920804.png" alt="image-20210818163920804" style="zoom:80%;">
-
-<p>由于中序遍历的次序是L—&gt;V —&gt;R，因此，对于一个节点，只要它存在左孩子，那么该节点会将访问权让给左孩子。</p>
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210818164734746.png" alt="image-20210818164734746" style="zoom:80%;">
-
-
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">goAlongLeftBranch</span><span class="params">(TreeNodePosition v,  Stack&lt;TreeNodePosition&gt; S)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span> (v!=<span class="keyword">null</span>)&#123; <span class="comment">//反复地入栈，沿左分支深入</span></span><br><span class="line">        S.push(v);</span><br><span class="line">    	v=v.getLChild();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">travIn_I2</span><span class="params">(TreeNodePosition v)</span></span>&#123;</span><br><span class="line">    Stack&lt;TreeNodePosition&gt; S = <span class="keyword">new</span> Stack&lt;&gt;(); <span class="comment">//辅助栈</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">true</span>)&#123; <span class="comment">//反复地</span></span><br><span class="line">        goAlongLeftBranch(v,S); <span class="comment">//从当前节点出发，逐批入栈</span></span><br><span class="line">        <span class="keyword">if</span> (S.empty()) <span class="keyword">break</span>; <span class="comment">//直至所有节点处理完毕</span></span><br><span class="line">        v=S.pop(); <span class="comment">//节点v的左子树或为空，或已遍历(等效为空)，故可以访问了</span></span><br><span class="line">        System.out.print(v.getData()+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">        v=v.getRChild(); <span class="comment">//进而转向其右子树(有可能为空，留意处理手法)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p>###后序遍历</p>
-<p><strong>递归实现：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">traverse</span><span class="params">(TreeNodePosition x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x==<span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">    traverse(x.getLChild);</span><br><span class="line">    traverse(x.getRChild);</span><br><span class="line">    System.out.println(x.getElem()); <span class="comment">//访问当前节点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>迭代实现：</strong></p>
-<p>​    不依赖递归机制，能否实现后序遍历呢？</p>
-<p>这里很难再像前序遍历的迭代实现1去利用迭代实现中序遍历，而且比中序遍历的迭代实现更困难了，对于左、右子树的递归遍历，都不是尾递归。</p>
-<p>解决方法：找到第一个被访问的节点，将其<strong>祖先及其右兄弟</strong>(如果存在的话)用栈保存。这样原问题就被分解为 <strong>依次</strong>对若干右子树的遍历问题。</p>
-<p>首先要解决的问题仍是 后序遍历任一二叉树T时，首次被访问的节点是哪个？如何找到它？</p>
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210818201142172.png" alt="image-20210818201142172" style="zoom:80%;">
-
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210818201227572.png" alt="image-20210818201227572" style="zoom:80%;">
-
-<p><strong>注意：</strong>遵循左优先，左优先并不是说右节点就不管它了，如果该节点左、右孩子都存在，两个则先让右节点先入栈（先入后出），再让左孩子入栈。左优先是优先沿左分支深入。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">gotoLeftmostLeaf</span><span class="params">(Stack&lt;TreeNodePosition&gt; S)</span></span></span><br><span class="line"><span class="function"></span>&#123;<span class="comment">//将沿途所遇节点依次入栈</span></span><br><span class="line">    TreeNodePosition x= S.peek();</span><br><span class="line">    <span class="keyword">while</span> (x!=<span class="keyword">null</span>)&#123; <span class="comment">//自顶向下反复检查栈顶元素（x节点）</span></span><br><span class="line">        <span class="keyword">if</span> (x.getLChild()!=<span class="keyword">null</span>)&#123; <span class="comment">//尽可能向左</span></span><br><span class="line">        <span class="keyword">if</span> (x.getRChild()!=<span class="keyword">null</span>)&#123; <span class="comment">//若有右孩子，优先入栈，先入后出</span></span><br><span class="line">            S.push(x.getRChild());</span><br><span class="line">    	&#125;</span><br><span class="line">            S.push(x.getLChild()); <span class="comment">//等右孩子入栈后才轮到左孩子，后入先出</span></span><br><span class="line">        &#125;<span class="keyword">else</span>&#123; <span class="comment">//不存在左孩子，实不得已</span></span><br><span class="line">        	S.push(x.getRChild()); <span class="comment">//才向右</span></span><br><span class="line">    	&#125;</span><br><span class="line">        x= S.peek(); <span class="comment">//x指向下一个左/右孩子（或者null）</span></span><br><span class="line">    &#125;</span><br><span class="line">    S.pop(); <span class="comment">//返回之前，记得弹出栈顶的空节点，</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">postOrder_I</span><span class="params">(TreeNodePosition x)</span></span>&#123;</span><br><span class="line">    Stack&lt;TreeNodePosition&gt; S = <span class="keyword">new</span> Stack&lt;&gt;(); <span class="comment">//辅助栈</span></span><br><span class="line">    <span class="keyword">if</span> (x!=<span class="keyword">null</span>) S.push(x); <span class="comment">//根节点入栈</span></span><br><span class="line">    <span class="keyword">while</span> (!S.empty())&#123; <span class="comment">//x始终为当前节点</span></span><br><span class="line">        <span class="keyword">if</span> (S.peek()!=x.getParent())&#123; <span class="comment">//若栈顶不是x的父节点（说明是右兄弟）</span></span><br><span class="line">            gotoLeftmostLeaf(S); <span class="comment">//则在其右兄子树中找到HLVFL（相当于递归深入）</span></span><br><span class="line">        &#125;</span><br><span class="line">        x= S.pop(); <span class="comment">//弹出栈顶（即前一节点的后继），并访问。</span></span><br><span class="line">        ystem.out.print(x.getData()+<span class="string">&quot;\t&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>图例演示：</strong></p>
-<p><img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210818203858171.png" alt="image-20210818203858171" style="zoom: 67%;"><img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210818204039009.png" alt="image-20210818204039009" style="zoom:85%;"></p>
-<p>入栈情况：</p>
-<p><img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210818204134838.png" alt="image-20210818204134838"><img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210818204150413.png" alt="image-20210818204150413"></p>
-<p>补充：如果觉得后序遍历比较麻烦，也可以通过调整一下先序遍历的代码顺序，再反转即可。</p>
-<img src="/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210820112649234.png" alt="image-20210820112649234" style="zoom: 50%;">
-
-
-
-
-
-<h3 id="层序遍历"><a href="#层序遍历" class="headerlink" title="层序遍历"></a>层序遍历</h3><p>上面涉及的遍历，我们会发现不管是前序、中序或是后序，都不免会出现后代节点先于祖先结点</p>
-<p>先访问的情况，即逆序。因此算法都显性或隐性地使用了==栈==结构。</p>
-<p>而层序遍历是自顶向下，自左向右，严格的顺序访问，因此我们考虑借助 ==队列==去实现层序遍历。</p>
-<p><strong>算法实现：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">travLevel</span><span class="params">()</span></span>&#123; <span class="comment">//按层输出</span></span><br><span class="line">    Queue&lt;TreeNodePosition&gt; Q = <span class="keyword">new</span> Queue&lt;&gt;();<span class="comment">//引入辅助队列</span></span><br><span class="line">    Q.enqueue(<span class="keyword">this</span>); <span class="comment">//根节点入队</span></span><br><span class="line">    <span class="keyword">while</span> (!Q.isEmpty())&#123;</span><br><span class="line">        <span class="keyword">int</span> size=Q.size(); <span class="comment">//定义一个size记录每层的节点个数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;size;i++)&#123;</span><br><span class="line">            BinTreeNode1 x = Q.dequeue(); <span class="comment">//取出队首节点，并随即</span></span><br><span class="line">            System.out.print(x.getData()+<span class="string">&quot;\t&quot;</span>); <span class="comment">//访问</span></span><br><span class="line">            <span class="keyword">if</span> (x.getLChild()!=<span class="keyword">null</span>) Q.enqueue(x.getLChild()); <span class="comment">//左孩子入队</span></span><br><span class="line">            <span class="keyword">if</span> (x.getRChild()!=<span class="keyword">null</span>) Q.enqueue(x.getRChild()); <span class="comment">//右孩子入队</span></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
+    	 
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://gllgdabai.github.io/2021/08/16/%E4%BA%8C%E5%8F%89%E6%A0%91/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/09/29/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/08/13/%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title"></div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -576,8 +209,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
